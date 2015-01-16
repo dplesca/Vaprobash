@@ -239,6 +239,9 @@ Vagrant.configure("2") do |config|
   # Install Ruby Version Manager (RVM)
   # config.vm.provision "shell", path: "#{github_url}/scripts/rvm.sh", privileged: false, args: ruby_gems.unshift(ruby_version)
 
+  # Install golang
+  config.vm.provision "shell", path: "#{github_url}/scripts/golang.sh"
+
   ####
   # Frameworks and Tooling
   ##########
